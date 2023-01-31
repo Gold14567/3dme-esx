@@ -7,7 +7,7 @@ Citizen.CreateThread(function()
 	end
 
 	while ESX.GetPlayerData().job == nil do
-		Citizen.Wait(10)
+		Citizen.Wait(20000)
 	end
 
 	PlayerData = ESX.GetPlayerData()
@@ -66,7 +66,7 @@ function chat(mePlayer, text)
     if jeux < 505 then
 
         TriggerEvent('chat:addMessage', {
-            template = '<div class="chat-message system">' .. text .. '</div>',
+            template = '<div class="chat-message do" style="background-color: rgba(132, 98, 170,100%); color:#fff">' .. text .. '</div>',
             multiline = true,
             args = { text}
         })
